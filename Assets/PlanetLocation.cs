@@ -33,7 +33,7 @@ public class PlanetLocation : MonoBehaviour {
             -0.00031596, 0.00005170, 0.00004818, 145.20780515, -0.04062942, -0.01183482};                   // pluto
 
 
-        Vector3 scl = new Vector3(0.08f, 0.08f, 0.08f);
+        Vector3 scl = new Vector3(0.5f, 0.5f, 0.5f);
         for (int i = 0; i < 9; i++)
         {
             if (i == 2)
@@ -43,7 +43,8 @@ public class PlanetLocation : MonoBehaviour {
                 planet.name = "Sun";
                 planets.Add(planet);
                 Vector3 pos = -earth;
-                planets[i].transform.position = pos.normalized * 2;
+                pos.z = 0.0f;
+                planets[i].transform.position = pos.normalized * 6;
                 planets[i].transform.localScale = scl;
             }
             else
@@ -55,7 +56,7 @@ public class PlanetLocation : MonoBehaviour {
                 rend.material = new Material(Resources.Load("Mesh" + planet.name + "Material", typeof(Material)) as Material);
                 planets.Add(planet);
                 Vector3 pos = GetPlanetLocation(elements, rates, i) - earth;
-                planets[i].transform.position = pos.normalized;
+                planets[i].transform.position = pos.normalized * 6;
                 planets[i].transform.localScale = scl;
             }
         }
