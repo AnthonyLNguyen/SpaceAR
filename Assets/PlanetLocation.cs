@@ -6,7 +6,11 @@ using UnityEngine;
 public class PlanetLocation : MonoBehaviour {
 
     public List<GameObject> planets = new List<GameObject>();
-    
+    private List<TextMesh> planetTexts = new List<TextMesh>();
+    private float initialYAngle = 0f;
+    private float appliedGyroYAngle = 0f;
+    private float calibrationYAngle = 0f;
+
     // Use this for initialization
     void Start () {
 
@@ -34,18 +38,36 @@ public class PlanetLocation : MonoBehaviour {
 
 
         Vector3 scl = new Vector3(0.5f, 0.5f, 0.5f);
+        Vector3 loc = GetLocation();
+
+        Camera.main.transform.position = loc;
+
         for (int i = 0; i < 9; i++)
         {
             if (i == 2)
             {
                 Vector3 earth = GetPlanetLocation(elements, rates, 2);
                 GameObject planet = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                Renderer rend = planet.GetComponent<Renderer>();
                 planet.name = "Sun";
+                rend.material = new Material(Resources.Load("Mesh" + planet.name + "Material", typeof(Material)) as Material);
                 planets.Add(planet);
-                Vector3 pos = -earth;
+                Vector3 pos = -earth - loc;
                 pos.z = 0.0f;
                 planets[i].transform.position = pos.normalized * 6;
+                //planets[i].transform.position = pos;
                 planets[i].transform.localScale = scl;
+
+                GameObject text = new GameObject();
+                TextMesh t = text.AddComponent<TextMesh>();
+                t.tag = "Planet Text";
+                t.name = planet.name + "Text";
+                t.text = planet.name;
+                t.fontSize = 30;
+                t.transform.position = pos.normalized * 6;
+                t.transform.localScale = new Vector3(0.04f, 0.04f, 0.04f);
+                t.anchor = TextAnchor.MiddleCenter;
+                planetTexts.Add(t);
             }
             else
             {
@@ -55,12 +77,66 @@ public class PlanetLocation : MonoBehaviour {
                 planet.name = planetNames[i];
                 rend.material = new Material(Resources.Load("Mesh" + planet.name + "Material", typeof(Material)) as Material);
                 planets.Add(planet);
-                Vector3 pos = GetPlanetLocation(elements, rates, i) - earth;
+                Vector3 pos = GetPlanetLocation(elements, rates, i) - earth - loc;
                 planets[i].transform.position = pos.normalized * 6;
+                //planets[i].transform.position = pos;
                 planets[i].transform.localScale = scl;
+
+                GameObject text = new GameObject();
+                TextMesh t = text.AddComponent<TextMesh>();
+                t.tag = "Planet Text";
+                t.name = planet.name + "Text";
+                t.text = planet.name;
+                t.fontSize = 30;
+                t.transform.position = pos.normalized * 6;
+                t.transform.localScale = new Vector3(0.04f, 0.04f, 0.04f);
+                t.anchor = TextAnchor.MiddleCenter;
+                planetTexts.Add(t);
             }
         }
 
+        Input.gyro.enabled = true;
+        Application.targetFrameRate = 60;
+        initialYAngle = transform.eulerAngles.y;
+    }
+
+    void Update()
+    {
+        foreach (TextMesh text in planetTexts) {
+            text.transform.rotation = Input.gyro.attitude;
+            text.transform.Rotate(0f, 0f, 180f, Space.Self); // Swap "handedness" of quaternion from gyro.
+            text.transform.Rotate(-23.5f, 23.5f, 156.5f, Space.World); // Rotate to make sense as a camera pointing out the back of your device.
+            appliedGyroYAngle = transform.eulerAngles.y; // Save the angle around y axis for use in calibration.
+            text.transform.Rotate(0f, -calibrationYAngle, 0f, Space.World);
+        }
+    }
+
+
+
+    Vector3 GetLocation()
+    {
+        double latitude = 34.1585530f * Math.PI / 180;
+        double longitude = -117.5394260f * Math.PI / 180;
+
+
+        // Start service before querying location
+        Input.location.Start();
+
+        //latitude = Input.location.lastData.latitude;
+        //longitude = Input.location.lastData.longitude;
+
+        // Stop service if there is no need to query location updates continuously
+        print(latitude + " " + longitude);
+        Input.location.Stop();
+
+        double radius = 4.26349651E-5f;
+        double locX = radius * Math.Cos(latitude) * Math.Cos(longitude);
+        double locY = radius * Math.Sin(latitude) * Math.Sin(longitude);
+        double locZ = radius * Math.Sin(latitude);
+
+        print(locX + ", " + locY + ", " + locZ);
+
+        return new Vector3((float)locX, (float)locY, (float)locZ);
     }
 
     Vector3 GetPlanetLocation(double [] elements, double [] rates, int planet)

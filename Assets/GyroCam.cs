@@ -25,7 +25,7 @@ public class GyroCam : MonoBehaviour {
     {
         transform.rotation = Input.gyro.attitude;
         transform.Rotate(0f, 0f, 180f, Space.Self); // Swap "handedness" of quaternion from gyro.
-        transform.Rotate(90f, 180f, 0f, Space.World); // Rotate to make sense as a camera pointing out the back of your device.
+        transform.Rotate(-23.5f, 23.5f, 156.5f, Space.World); // Rotate to make sense as a camera pointing out the back of your device.
         appliedGyroYAngle = transform.eulerAngles.y; // Save the angle around y axis for use in calibration.
     }
 
