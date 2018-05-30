@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlanetLocation : MonoBehaviour {
 
-    public List<GameObject> planets = new List<GameObject>();
+    public static List<GameObject> planets = new List<GameObject>();
     private List<TextMesh> planetTexts = new List<TextMesh>();
     private float initialYAngle = 0f;
     private float appliedGyroYAngle = 0f;
@@ -59,6 +59,7 @@ public class PlanetLocation : MonoBehaviour {
                 planets[i].transform.localScale = scl;
 
                 GameObject text = new GameObject();
+                text.transform.parent = planet.transform;
                 TextMesh t = text.AddComponent<TextMesh>();
                 t.tag = "Planet Text";
                 t.name = planet.name + "Text";
@@ -83,6 +84,7 @@ public class PlanetLocation : MonoBehaviour {
                 planets[i].transform.localScale = scl;
 
                 GameObject text = new GameObject();
+                text.transform.parent = planet.transform;
                 TextMesh t = text.AddComponent<TextMesh>();
                 t.tag = "Planet Text";
                 t.name = planet.name + "Text";
@@ -111,7 +113,23 @@ public class PlanetLocation : MonoBehaviour {
         }
     }
 
+    public void toggle(int i)
+    {
+        planets[i].SetActive(!planets[i].active);
+    }
 
+    public void disableText()
+    {
+        for (int i = 0; i < 9; i++)
+        {
+            for (int j = 0; j < planets[i].transform.childCount; j++)
+            {
+                var child = planets[i].transform.GetChild(j).gameObject;
+                if (child != null)
+                    child.SetActive(!child.active);
+            }
+        }
+    }
 
     Vector3 GetLocation()
     {
