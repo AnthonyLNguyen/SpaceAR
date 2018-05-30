@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlanetLocation : MonoBehaviour {
 
     public static List<GameObject> planets = new List<GameObject>();
+    public static String[] planetNames = { "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto" };
     private List<TextMesh> planetTexts = new List<TextMesh>();
     private float initialYAngle = 0f;
     private float appliedGyroYAngle = 0f;
@@ -14,7 +15,7 @@ public class PlanetLocation : MonoBehaviour {
     // Use this for initialization
     void Start () {
 
-        String [] planetNames = { "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto" };
+        
 
         double[] elements = {0.38709927, 0.20563593, 7.00497902, 252.25032350, 77.45779628, 48.33076593,    // mercury
             0.72333566, 0.00677672, 3.39467605, 181.97909950, 131.60246718, 76.67984255,                    // venus
@@ -82,6 +83,8 @@ public class PlanetLocation : MonoBehaviour {
                 planets[i].transform.position = pos.normalized * 6;
                 //planets[i].transform.position = pos;
                 planets[i].transform.localScale = scl;
+                planets[i].gameObject.AddComponent(Type.GetType("PlanetInfo"));
+                planets[i].gameObject.GetComponent<PlanetInfo>().planetNumber = i;
 
                 GameObject text = new GameObject();
                 text.transform.parent = planet.transform;

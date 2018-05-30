@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Planet Text
+  - Info Model
+  - Info Text
   layers:
   - Default
   - TransparentFX
