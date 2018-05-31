@@ -61,13 +61,6 @@ public class Date : MonoBehaviour {
 
     public void TimeLapseStart()
     {
-        if (timelapse)
-        {
-            timelapse = false;
-        }
-        else
-        {
-            timelapse = true;
-        }
+            timelapse = !timelapse;
     }
 }

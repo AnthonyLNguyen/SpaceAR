@@ -61,7 +61,7 @@ public class PlanetLocation : MonoBehaviour {
                 planets[i].transform.localScale = scl;
                 planets[i].gameObject.AddComponent(Type.GetType("PlanetInfo"));
                 planets[i].gameObject.GetComponent<PlanetInfo>().planetNumber = i;
-
+                /*
                 GameObject text = new GameObject();
                 text.transform.parent = planet.transform;
                 TextMesh t = text.AddComponent<TextMesh>();
@@ -73,6 +73,7 @@ public class PlanetLocation : MonoBehaviour {
                 t.transform.localScale = new Vector3(0.04f, 0.04f, 0.04f);
                 t.anchor = TextAnchor.MiddleCenter;
                 planetTexts.Add(t);
+                */
             }
             else
             {
@@ -88,7 +89,7 @@ public class PlanetLocation : MonoBehaviour {
                 planets[i].transform.localScale = scl;
                 planets[i].gameObject.AddComponent(Type.GetType("PlanetInfo"));
                 planets[i].gameObject.GetComponent<PlanetInfo>().planetNumber = i;
-
+                /*
                 GameObject text = new GameObject();
                 text.transform.parent = planet.transform;
                 TextMesh t = text.AddComponent<TextMesh>();
@@ -100,6 +101,7 @@ public class PlanetLocation : MonoBehaviour {
                 t.transform.localScale = new Vector3(0.04f, 0.04f, 0.04f);
                 t.anchor = TextAnchor.MiddleCenter;
                 planetTexts.Add(t);
+                */
             }
         }
 

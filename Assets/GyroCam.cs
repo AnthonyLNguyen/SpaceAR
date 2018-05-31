@@ -13,6 +13,7 @@ public class GyroCam : MonoBehaviour {
         Input.gyro.enabled = true;
         Application.targetFrameRate = 60;
         initialYAngle = transform.eulerAngles.y;
+        DisableCamera();
     }
 
     void Update()
