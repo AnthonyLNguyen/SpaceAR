@@ -8,6 +8,7 @@ public class Dummy : MonoBehaviour
 
     public static string dummyName = "Earth";
     public float speed = 10f;
+    private float baseAngle = 0.0f;
 
     // Use this for initialization
     void Start()
@@ -30,20 +31,13 @@ public class Dummy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.up, speed * Time.deltaTime);
+        //transform.Rotate(Vector3.up, speed * Time.deltaTime);
+        Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+        pos = Input.mousePosition - pos;
+        float ang = Mathf.Atan2(pos.y, pos.x) * Mathf.Rad2Deg - baseAngle;
+        transform.rotation = Quaternion.AngleAxis(ang, Vector3.down);
         Material();
     }
-    void OnMouseDown()
-    {
-        GameObject[] infos = GameObject.FindGameObjectsWithTag("Info Text");
-        foreach (GameObject a in infos)
-        {
-            a.transform.localScale = new Vector3(0, 0, 0);
-        }
-        infos = GameObject.FindGameObjectsWithTag("Info Model");
-        foreach (GameObject a in infos)
-        {
-            a.transform.localScale = new Vector3(0, 0, 0);
-        }
-    }
+
+
 }
