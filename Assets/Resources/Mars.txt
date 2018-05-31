@@ -6,6 +6,6 @@ Known Moons:	2
 Notable Moons:	Phobos & Deimos
 Orbit Distance:	227,943,824 km (1.38 AU)
 Orbit Period:	686.98 Earth days (1.88 Earth years)
-Surface Temperature:	-87 to -5 degrees celcius
+Surface Temperature:	-87 to -5 degrees celsius
 First Record:	2nd Millenium BC
 Recorded By:	Egyptian astronomers

@@ -7,6 +7,7 @@ public class PlanetLocation : MonoBehaviour {
 
     public static List<GameObject> planets = new List<GameObject>();
     public static String[] planetNames = { "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto" };
+    public static String[] bodyNames = { "Mercury", "Venus", "Sun", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto" };
     private List<TextMesh> planetTexts = new List<TextMesh>();
     private float initialYAngle = 0f;
     private float appliedGyroYAngle = 0f;
@@ -58,6 +59,8 @@ public class PlanetLocation : MonoBehaviour {
                 planets[i].transform.position = pos.normalized * 6;
                 //planets[i].transform.position = pos;
                 planets[i].transform.localScale = scl;
+                planets[i].gameObject.AddComponent(Type.GetType("PlanetInfo"));
+                planets[i].gameObject.GetComponent<PlanetInfo>().planetNumber = i;
 
                 GameObject text = new GameObject();
                 text.transform.parent = planet.transform;

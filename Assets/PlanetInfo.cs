@@ -18,7 +18,7 @@ public class PlanetInfo : MonoBehaviour {
 
     void OnMouseDown()
     {
-        string name = PlanetLocation.planetNames[planetNumber];
+        string name = PlanetLocation.bodyNames[planetNumber];
         Debug.unityLogger.Log(name);
         Dummy.change(name);
         GameObject[] infos = GameObject.FindGameObjectsWithTag("Info Model");

@@ -6,6 +6,6 @@ Known Moons:	None
 Notable Moons:	None
 Orbit Distance:	108,209,475 km (0.73 AU)
 Orbit Period:	224.70 Earth days
-Surface Temperature:	462 degrees celcius
+Surface Temperature:	462 degrees celsius
 First Record:	14th Century BC
 Recorded By:	Babylonian astronomers

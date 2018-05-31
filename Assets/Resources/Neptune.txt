@@ -7,6 +7,6 @@ Notable Moons:	Triton
 Known Rings:	5
 Orbit Distance:	4,498,396,441 km (30.10 AU)
 Orbit Period:	60,190.03 Earth days (164.79 Earth years)
-Surface Temperature:	-201 degrees celcius
+Surface Temperature:	-201 degrees celsius
 First Record:	September 23rd 1846
 Recorded By:	Urbain Jean Joseph Le Verrier & Johann Galle

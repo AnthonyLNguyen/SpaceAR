@@ -4,6 +4,6 @@ Known Moons:	5
 Notable Moons:	Charon, Nix, Hydra, Kerberos and Styx
 Orbit Distance:	5,874,000,000 km (39.26 AU)
 Orbit Period:	247.92065 Earth years
-Surface Temperature:	-229 degrees celcius
+Surface Temperature:	-229 degrees celsius
 Discovery Date:	February 18th 1930
 Discovered By:	Clyde W. Tombaugh

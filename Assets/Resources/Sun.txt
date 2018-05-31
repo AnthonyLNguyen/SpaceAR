@@ -1,0 +1,6 @@
+Age:	4.6 Billion Years
+Type:	Yellow Dwarf (G2V)
+Mass:	1,989,100,000,000,000,000, 000 billion kg (333,060 x Earth)
+Diameter:	1,392,684 km
+Circumference at Equator:	4,370,005.6 km
+Surface Temperature:	5500 degrees celsius
