@@ -21,6 +21,14 @@ public class Dummy : MonoBehaviour
     {
         Renderer rend = this.GetComponent<Renderer>();
         rend.material = new Material(Resources.Load("Mesh" + dummyName + "Material", typeof(Material)) as Material);
+        if (dummyName != "Saturn")
+        {
+            gameObject.transform.FindChild("Circle").gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.transform.FindChild("Circle").gameObject.SetActive(true);
+        }
     }
 
     public static void change(string v)
