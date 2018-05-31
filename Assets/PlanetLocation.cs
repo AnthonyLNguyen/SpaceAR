@@ -110,7 +110,7 @@ public class PlanetLocation : MonoBehaviour {
         foreach (TextMesh text in planetTexts) {
             text.transform.rotation = Input.gyro.attitude;
             text.transform.Rotate(0f, 0f, 180f, Space.Self); // Swap "handedness" of quaternion from gyro.
-            text.transform.Rotate(-23.5f, 23.5f, 156.5f, Space.World); // Rotate to make sense as a camera pointing out the back of your device.
+            transform.Rotate(0f, 90f - 23.5f, 0f, Space.World); // Rotate to make sense as a camera pointing out the back of your device.
             appliedGyroYAngle = transform.eulerAngles.y; // Save the angle around y axis for use in calibration.
             text.transform.Rotate(0f, -calibrationYAngle, 0f, Space.World);
         }

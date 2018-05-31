@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 34518143}
   - component: {fileID: 34518145}
   - component: {fileID: 34518144}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 54184727}
   - component: {fileID: 54184729}
   - component: {fileID: 54184728}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,6 +256,75 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 54184726}
+--- !u!1 &61472344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 61472345}
+  - component: {fileID: 61472347}
+  - component: {fileID: 61472346}
+  m_Layer: 0
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &61472345
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 61472344}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1657264436}
+  m_Father: {fileID: 246754174}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 10, y: -10}
+  m_SizeDelta: {x: 20, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &61472346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 61472344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &61472347
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 61472344}
 --- !u!1 &85433475
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,7 +335,7 @@ GameObject:
   - component: {fileID: 85433476}
   - component: {fileID: 85433478}
   - component: {fileID: 85433477}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -286,10 +355,10 @@ RectTransform:
   m_Father: {fileID: 1926352605}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.624}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.0000076293945, y: -429}
-  m_SizeDelta: {x: 825.9, y: 814.9}
+  m_AnchoredPosition: {x: -0.0000076293945, y: -341}
+  m_SizeDelta: {x: 825.9, y: 638.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &85433477
 MonoBehaviour:
@@ -344,7 +413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 112878130}
   - component: {fileID: 112878131}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Toggle_Pluto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +433,7 @@ RectTransform:
   - {fileID: 1681127435}
   - {fileID: 1339674413}
   m_Father: {fileID: 331497813}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -438,7 +507,7 @@ GameObject:
   - component: {fileID: 123365079}
   - component: {fileID: 123365078}
   - component: {fileID: 123365077}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,7 +602,7 @@ GameObject:
   - component: {fileID: 127626598}
   - component: {fileID: 127626600}
   - component: {fileID: 127626599}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -597,6 +666,98 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 127626597}
+--- !u!1 &246754173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 246754174}
+  - component: {fileID: 246754175}
+  m_Layer: 0
+  m_Name: Toggle_Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &246754174
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 246754173}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.9294598, y: 3.9294598, z: 3.9294598}
+  m_Children:
+  - {fileID: 61472345}
+  - {fileID: 1947928684}
+  m_Father: {fileID: 331497813}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -105.999985, y: -872}
+  m_SizeDelta: {x: 160, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &246754175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 246754173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2109663825, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 61472346}
+  toggleTransition: 1
+  graphic: {fileID: 1657264437}
+  m_Group: {fileID: 0}
+  onValueChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1298242538}
+        m_MethodName: DisableCamera
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+    m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_IsOn: 1
 --- !u!1 &263774454
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,7 +767,7 @@ GameObject:
   m_Component:
   - component: {fileID: 263774455}
   - component: {fileID: 263774456}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Toggle_Mars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,7 +787,7 @@ RectTransform:
   - {fileID: 952040900}
   - {fileID: 54184727}
   m_Father: {fileID: 331497813}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -700,7 +861,7 @@ GameObject:
   - component: {fileID: 331497815}
   - component: {fileID: 331497814}
   - component: {fileID: 331497816}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -717,6 +878,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 246754174}
   - {fileID: 2026680281}
   - {fileID: 332737254}
   - {fileID: 1669371757}
@@ -788,7 +950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 332737254}
   - component: {fileID: 332737255}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Toggle_Venus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -808,7 +970,7 @@ RectTransform:
   - {fileID: 1946806528}
   - {fileID: 1189732329}
   m_Father: {fileID: 331497813}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -882,7 +1044,7 @@ GameObject:
   - component: {fileID: 337500248}
   - component: {fileID: 337500247}
   - component: {fileID: 337500246}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1003,7 +1165,7 @@ GameObject:
   - component: {fileID: 341108125}
   - component: {fileID: 341108124}
   - component: {fileID: 341108126}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Planets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1055,7 +1217,7 @@ GameObject:
   - component: {fileID: 477353136}
   - component: {fileID: 477353138}
   - component: {fileID: 477353137}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1129,7 +1291,7 @@ GameObject:
   - component: {fileID: 498211355}
   - component: {fileID: 498211357}
   - component: {fileID: 498211356}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1198,7 +1360,7 @@ GameObject:
   - component: {fileID: 604540943}
   - component: {fileID: 604540945}
   - component: {fileID: 604540944}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1272,7 +1434,7 @@ GameObject:
   - component: {fileID: 611776018}
   - component: {fileID: 611776020}
   - component: {fileID: 611776019}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1346,7 +1508,7 @@ GameObject:
   - component: {fileID: 651752729}
   - component: {fileID: 651752731}
   - component: {fileID: 651752730}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1414,7 +1576,7 @@ GameObject:
   - component: {fileID: 656590387}
   - component: {fileID: 656590389}
   - component: {fileID: 656590388}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1488,7 +1650,7 @@ GameObject:
   - component: {fileID: 676276975}
   - component: {fileID: 676276977}
   - component: {fileID: 676276976}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1556,7 +1718,7 @@ GameObject:
   - component: {fileID: 737639861}
   - component: {fileID: 737639863}
   - component: {fileID: 737639862}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1625,7 +1787,7 @@ GameObject:
   - component: {fileID: 769293915}
   - component: {fileID: 769293917}
   - component: {fileID: 769293916}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1694,7 +1856,7 @@ GameObject:
   - component: {fileID: 952040900}
   - component: {fileID: 952040902}
   - component: {fileID: 952040901}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1762,7 +1924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 961389013}
   - component: {fileID: 961389014}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Toggle_Names
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1782,7 +1944,7 @@ RectTransform:
   - {fileID: 1012606105}
   - {fileID: 656590387}
   m_Father: {fileID: 331497813}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -1855,7 +2017,7 @@ GameObject:
   - component: {fileID: 1012606105}
   - component: {fileID: 1012606107}
   - component: {fileID: 1012606106}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1924,7 +2086,7 @@ GameObject:
   - component: {fileID: 1036836971}
   - component: {fileID: 1036836973}
   - component: {fileID: 1036836972}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1992,7 +2154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1142851197}
   - component: {fileID: 1142851198}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Toggle_Uranus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2012,7 +2174,7 @@ RectTransform:
   - {fileID: 498211355}
   - {fileID: 604540943}
   m_Father: {fileID: 331497813}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -2085,7 +2247,7 @@ GameObject:
   - component: {fileID: 1189732329}
   - component: {fileID: 1189732331}
   - component: {fileID: 1189732330}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2159,7 +2321,7 @@ GameObject:
   - component: {fileID: 1296702067}
   - component: {fileID: 1296702069}
   - component: {fileID: 1296702068}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2287,7 +2449,7 @@ Camera:
   m_GameObject: {fileID: 1298242536}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -2321,14 +2483,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1298242536}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.6017731, y: 0.16063218, z: 0.125169, w: 0.7722689}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1870016754}
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -75.853004, y: 23.500002, z: 0}
 --- !u!1 &1299596113
 GameObject:
   m_ObjectHideFlags: 0
@@ -2339,7 +2501,7 @@ GameObject:
   - component: {fileID: 1299596114}
   - component: {fileID: 1299596116}
   - component: {fileID: 1299596115}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2413,7 +2575,7 @@ GameObject:
   - component: {fileID: 1339674413}
   - component: {fileID: 1339674415}
   - component: {fileID: 1339674414}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2487,7 +2649,7 @@ GameObject:
   - component: {fileID: 1456619299}
   - component: {fileID: 1456619301}
   - component: {fileID: 1456619300}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2555,7 +2717,7 @@ GameObject:
   - component: {fileID: 1510996077}
   - component: {fileID: 1510996079}
   - component: {fileID: 1510996078}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2628,7 +2790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1579413755}
   - component: {fileID: 1579413756}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Toggle_Saturn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2648,7 +2810,7 @@ RectTransform:
   - {fileID: 1849603624}
   - {fileID: 611776018}
   m_Father: {fileID: 331497813}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -2721,7 +2883,7 @@ GameObject:
   - component: {fileID: 1647021661}
   - component: {fileID: 1647021663}
   - component: {fileID: 1647021662}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2789,7 +2951,7 @@ GameObject:
   - component: {fileID: 1653072652}
   - component: {fileID: 1653072654}
   - component: {fileID: 1653072653}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2847,6 +3009,74 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1653072651}
+--- !u!1 &1657264435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1657264436}
+  - component: {fileID: 1657264438}
+  - component: {fileID: 1657264437}
+  m_Layer: 0
+  m_Name: Checkmark
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1657264436
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1657264435}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 61472345}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1657264437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1657264435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1657264438
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1657264435}
 --- !u!1 &1661017217
 GameObject:
   m_ObjectHideFlags: 0
@@ -2857,7 +3087,7 @@ GameObject:
   - component: {fileID: 1661017218}
   - component: {fileID: 1661017220}
   - component: {fileID: 1661017219}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2931,7 +3161,7 @@ GameObject:
   - component: {fileID: 1667530883}
   - component: {fileID: 1667530885}
   - component: {fileID: 1667530884}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2998,7 +3228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1669371757}
   - component: {fileID: 1669371758}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Toggle_Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3018,7 +3248,7 @@ RectTransform:
   - {fileID: 737639861}
   - {fileID: 1510996077}
   m_Father: {fileID: 331497813}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -3091,7 +3321,7 @@ GameObject:
   - component: {fileID: 1674642062}
   - component: {fileID: 1674642064}
   - component: {fileID: 1674642063}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3159,7 +3389,7 @@ GameObject:
   - component: {fileID: 1681127435}
   - component: {fileID: 1681127437}
   - component: {fileID: 1681127436}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3228,7 +3458,7 @@ GameObject:
   - component: {fileID: 1684591648}
   - component: {fileID: 1684591650}
   - component: {fileID: 1684591649}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3296,7 +3526,7 @@ GameObject:
   - component: {fileID: 1686319879}
   - component: {fileID: 1686319881}
   - component: {fileID: 1686319880}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3364,7 +3594,7 @@ GameObject:
   - component: {fileID: 1849603624}
   - component: {fileID: 1849603626}
   - component: {fileID: 1849603625}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3545,7 +3775,7 @@ GameObject:
   - component: {fileID: 1926352607}
   - component: {fileID: 1926352606}
   - component: {fileID: 1926352608}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Info
   m_TagString: Info Text
   m_Icon: {fileID: 0}
@@ -3560,7 +3790,7 @@ RectTransform:
   m_GameObject: {fileID: 1926352604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0186374, y: 0.8402795, z: 0.8402795}
   m_Children:
   - {fileID: 85433476}
   m_Father: {fileID: 123365080}
@@ -3568,7 +3798,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -440.1}
+  m_AnchoredPosition: {x: 0, y: -469.49}
   m_SizeDelta: {x: 0, y: -880.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1926352606
@@ -3625,7 +3855,7 @@ GameObject:
   - component: {fileID: 1946806528}
   - component: {fileID: 1946806530}
   - component: {fileID: 1946806529}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3684,6 +3914,80 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1946806527}
+--- !u!1 &1947928683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1947928684}
+  - component: {fileID: 1947928686}
+  - component: {fileID: 1947928685}
+  m_Layer: 0
+  m_Name: Label
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1947928684
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1947928683}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 246754174}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 9, y: -0.4999981}
+  m_SizeDelta: {x: -28, y: -3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1947928685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1947928683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 221
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Toggle Camera
+--- !u!222 &1947928686
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1947928683}
 --- !u!1 &2024028730
 GameObject:
   m_ObjectHideFlags: 0
@@ -3693,7 +3997,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2024028731}
   - component: {fileID: 2024028732}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Toggle_Neptune
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3713,7 +4017,7 @@ RectTransform:
   - {fileID: 769293915}
   - {fileID: 127626598}
   m_Father: {fileID: 331497813}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -3785,7 +4089,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2026680281}
   - component: {fileID: 2026680282}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Toggle_Mercury
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3805,7 +4109,7 @@ RectTransform:
   - {fileID: 34518143}
   - {fileID: 1661017218}
   m_Father: {fileID: 331497813}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -3877,7 +4181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2083087114}
   - component: {fileID: 2083087115}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Toggle_Jupiter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3897,7 +4201,7 @@ RectTransform:
   - {fileID: 1036836971}
   - {fileID: 1299596114}
   m_Father: {fileID: 331497813}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
