@@ -24,7 +24,7 @@ public class PlanetInfo : MonoBehaviour {
         GameObject[] infos = GameObject.FindGameObjectsWithTag("Info Model");
         foreach (GameObject a in infos)
         {
-            a.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            a.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         }
         infos = GameObject.FindGameObjectsWithTag("Info Text");
         foreach (GameObject a in infos)
