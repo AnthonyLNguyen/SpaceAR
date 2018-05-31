@@ -25,7 +25,7 @@ public class GyroCam : MonoBehaviour {
     {
         transform.rotation = Input.gyro.attitude;
         transform.Rotate(0f, 0f, 180f, Space.Self); // Swap "handedness" of quaternion from gyro.
-        transform.Rotate(0f, 90f - 23.5f, 0f, Space.World); // Rotate to make sense as a camera pointing out the back of your device.
+        transform.Rotate(90f, 180f, 0f, Space.World); // Rotate to make sense as a camera pointing out the back of your device.
         appliedGyroYAngle = transform.eulerAngles.y; // Save the angle around y axis for use in calibration.
     }
 
@@ -36,16 +36,17 @@ public class GyroCam : MonoBehaviour {
 
     public void DisableCamera()
     {
+        Camera mainCamera = Camera.main;
         if (Vuforia.VuforiaBehaviour.Instance.enabled == true)
         {
             Vuforia.VuforiaBehaviour.Instance.enabled = false;
-            Camera.main.clearFlags = CameraClearFlags.Skybox;
+           mainCamera.clearFlags = CameraClearFlags.Skybox;
             print("Disabled camera");
         }
         else
         {
             Vuforia.VuforiaBehaviour.Instance.enabled = true;
-            Camera.main.clearFlags = CameraClearFlags.SolidColor;
+            mainCamera.clearFlags = CameraClearFlags.SolidColor;
             print("Enabled camera");
         }
     }

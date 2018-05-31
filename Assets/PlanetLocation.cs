@@ -5,18 +5,18 @@ using UnityEngine;
 
 public class PlanetLocation : MonoBehaviour {
 
-    public static List<GameObject> planets = new List<GameObject>();
+    public List<GameObject> planets = new List<GameObject>();
     public static String[] planetNames = { "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto" };
     public static String[] bodyNames = { "Mercury", "Venus", "Sun", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto" };
     private List<TextMesh> planetTexts = new List<TextMesh>();
     private float initialYAngle = 0f;
     private float appliedGyroYAngle = 0f;
     private float calibrationYAngle = 0f;
+    public DateTime now = DateTime.Now;
+    double time = DateTime.Now.Subtract(new DateTime(2000, 1, 1, 12, 0, 0)).TotalSeconds / (60 * 60 * 24 * 365.25 * 100);
 
     // Use this for initialization
     void Start () {
-
-        
 
         double[] elements = {0.38709927, 0.20563593, 7.00497902, 252.25032350, 77.45779628, 48.33076593,    // mercury
             0.72333566, 0.00677672, 3.39467605, 181.97909950, 131.60246718, 76.67984255,                    // venus
@@ -48,7 +48,7 @@ public class PlanetLocation : MonoBehaviour {
         {
             if (i == 2)
             {
-                Vector3 earth = GetPlanetLocation(elements, rates, 2);
+                Vector3 earth = GetPlanetLocation(2, time);
                 GameObject planet = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 Renderer rend = planet.GetComponent<Renderer>();
                 planet.name = "Sun";
@@ -76,13 +76,13 @@ public class PlanetLocation : MonoBehaviour {
             }
             else
             {
-                Vector3 earth = GetPlanetLocation(elements, rates, 2);
+                Vector3 earth = GetPlanetLocation(2, time);
                 GameObject planet = GameObject.CreatePrimitive(PrimitiveType.Sphere);
                 Renderer rend = planet.GetComponent<Renderer>();
                 planet.name = planetNames[i];
                 rend.material = new Material(Resources.Load("Mesh" + planet.name + "Material", typeof(Material)) as Material);
                 planets.Add(planet);
-                Vector3 pos = GetPlanetLocation(elements, rates, i) - earth - loc;
+                Vector3 pos = GetPlanetLocation(i, time) - earth - loc;
                 planets[i].transform.position = pos.normalized * 6;
                 //planets[i].transform.position = pos;
                 planets[i].transform.localScale = scl;
@@ -113,7 +113,7 @@ public class PlanetLocation : MonoBehaviour {
         foreach (TextMesh text in planetTexts) {
             text.transform.rotation = Input.gyro.attitude;
             text.transform.Rotate(0f, 0f, 180f, Space.Self); // Swap "handedness" of quaternion from gyro.
-            transform.Rotate(0f, 90f - 23.5f, 0f, Space.World); // Rotate to make sense as a camera pointing out the back of your device.
+            transform.Rotate(90f, 180f, 0f, Space.World); // Rotate to make sense as a camera pointing out the back of your device.
             appliedGyroYAngle = transform.eulerAngles.y; // Save the angle around y axis for use in calibration.
             text.transform.Rotate(0f, -calibrationYAngle, 0f, Space.World);
         }
@@ -139,15 +139,15 @@ public class PlanetLocation : MonoBehaviour {
 
     Vector3 GetLocation()
     {
-        double latitude = 34.1585530f * Math.PI / 180;
-        double longitude = -117.5394260f * Math.PI / 180;
+        double latitude;
+        double longitude;
 
 
         // Start service before querying location
         Input.location.Start();
 
-        //latitude = Input.location.lastData.latitude;
-        //longitude = Input.location.lastData.longitude;
+        latitude = Input.location.lastData.latitude;
+        longitude = Input.location.lastData.longitude;
 
         // Stop service if there is no need to query location updates continuously
         print(latitude + " " + longitude);
@@ -163,9 +163,27 @@ public class PlanetLocation : MonoBehaviour {
         return new Vector3((float)locX, (float)locY, (float)locZ);
     }
 
-    Vector3 GetPlanetLocation(double [] elements, double [] rates, int planet)
+    public Vector3 GetPlanetLocation(int planet, double time)
     {
-        double time = DateTime.Now.Subtract(new DateTime(2000, 1, 1, 12, 0, 0)).TotalSeconds / (60 * 60 * 24 * 365.25 * 100);
+        double[] elements = {0.38709927, 0.20563593, 7.00497902, 252.25032350, 77.45779628, 48.33076593,    // mercury
+            0.72333566, 0.00677672, 3.39467605, 181.97909950, 131.60246718, 76.67984255,                    // venus
+            1.00000261, 0.01671123, -0.00001531, 100.46457166, 102.93768193, 0.0,                           // earth bary center
+            1.52371034, 0.09339410, 1.84969142,  -4.55343205, -23.94362959, 49.55953891,                    // mars
+            5.20288700, 0.04838624, 1.30439695,  34.39644051, 14.72847983, 100.47390909,                    // jupiter
+            9.53667594, 0.05386179, 2.48599187,  49.95424423, 92.59887831, 113.66242448,                    // saturn
+            19.18916464, 0.04725744, 0.77263783, 313.23810451, 170.95427630, 74.01692503,                   // uranus
+            30.06992276, 0.00859048, 1.77004347, -55.12002969, 44.96476227, 131.78422574,                   // neptune
+            39.48211675, 0.24882730, 17.14001206, 238.92903833, 224.06891629, 110.30393684};                // pluto
+
+        double[] rates = {0.00000037, 0.00001906, -0.00594749, 149472.67411175, 0.16047689, -0.12534081,    // mercury
+            0.00000390, -0.00004107, -0.00078890, 58517.81538729, 0.00268329, -0.27769418,                  // venus
+            0.00000562, -0.00004392, -0.01294668, 35999.37244981, 0.32327364, 0.0,                          // earth bary center
+            0.00001847, 0.00007882, -0.00813131, 19140.30268499, 0.44441088, -0.29257343,                   // mars
+            -0.00011607, -0.00013253, -0.00183714, 3034.74612775, 0.21252668, 0.20469106,                   // jupiter
+            -0.00125060, -0.00050991, 0.00193609, 1222.49362201, -0.41897216, -0.28867794,                  // saturn
+            -0.00196176, -0.00004397, -0.00242939, 428.48202785, 0.40805281, 0.04240589,                    // uranus
+            0.00026291, 0.00005105, 0.00035372, 218.45945325, -0.32241464, -0.00508664,                     // neptune
+            -0.00031596, 0.00005170, 0.00004818, 145.20780515, -0.04062942, -0.01183482};                   // pluto
 
         double a = elements[6 * planet + 0] + rates[6 * planet + 0] * time;             // (au) semi_major_axis
         double e = elements[6 * planet + 1] + rates[6 * planet + 1] * time;             //  ( ) eccentricity
@@ -211,7 +229,7 @@ public class PlanetLocation : MonoBehaviour {
         return pos;
     }
 
-    double KeplersEquation(double E, double M, double e)
+    public double KeplersEquation(double E, double M, double e)
     {
         double deltaM = M - (E - (e * 180.0 / Math.PI) * Math.Sin(E * Math.PI / 180.0));
         double deltaE = deltaM / (1.0 - e * Math.Cos(E * Math.PI / 180.0));

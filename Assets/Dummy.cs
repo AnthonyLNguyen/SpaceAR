@@ -23,11 +23,11 @@ public class Dummy : MonoBehaviour
         rend.material = new Material(Resources.Load("Mesh" + dummyName + "Material", typeof(Material)) as Material);
         if (dummyName != "Saturn")
         {
-            gameObject.transform.FindChild("Circle").gameObject.SetActive(false);
+            gameObject.transform.Find("Circle").gameObject.SetActive(false);
         }
         else
         {
-            gameObject.transform.FindChild("Circle").gameObject.SetActive(true);
+            gameObject.transform.Find("Circle").gameObject.SetActive(true);
         }
     }
 
