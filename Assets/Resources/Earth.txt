@@ -1,0 +1,9 @@
+Mass:	5,972,190,000,000,000 billion kg
+Equatorial Diameter:	12,756 km
+Polar Diameter:	12,714 km
+Equatorial Circumference:	40,030 km
+Known Moons:	1
+Notable Moons:	The Moon
+Orbit Distance:	149,598,262 km (1 AU)
+Orbit Period:	365.26 Earth days
+Surface Temperature:	

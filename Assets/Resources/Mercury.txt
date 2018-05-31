@@ -1,0 +1,11 @@
+Mass:	330,104,000,000,000 billion kg (0.055 x Earth)
+Equatorial Diameter:	4,879 km
+Polar Diameter:	4,879 km
+Equatorial Circumference:	15,329 km
+Known Moons:	None
+Notable Moons:	None
+Orbit Distance:	57,909,227 km (0.39 AU)
+Orbit Period:	87.97 Earth days
+Surface Temperature:	-173 to 427 degrees celcius
+First Record:	14th Century BC
+Recorded By:	Assyrian astronomers

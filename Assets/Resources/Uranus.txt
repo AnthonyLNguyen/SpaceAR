@@ -1,0 +1,12 @@
+Mass:	86,810,300,000,000,000 billion kg (14.536 x Earth)
+Equatorial Diameter:	51,118 km
+Polar Diameter:	49,946 km
+Equatorial Circumference:	159,354 km
+Known Moons:	27
+Notable Moons:	Oberon, Titania, Miranda, Ariel & Umbriel
+Known Rings:	13
+Orbit Distance:	2,870,658,186 km (19.22 AU)
+Orbit Period:	30,687.15 Earth days (84.02 Earth years)
+Surface Temperature:	-197 degrees celcius
+First Record:	March 13th 1781
+Recorded By:	William Herschel

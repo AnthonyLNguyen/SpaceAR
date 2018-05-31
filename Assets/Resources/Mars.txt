@@ -1,0 +1,11 @@
+Mass:	641,693,000,000,000 billion kg (0.107 x Earth)
+Equatorial Diameter:	6,805 km
+Polar Diameter:	6,755 km
+Equatorial Circumference:	21,297 km
+Known Moons:	2
+Notable Moons:	Phobos & Deimos
+Orbit Distance:	227,943,824 km (1.38 AU)
+Orbit Period:	686.98 Earth days (1.88 Earth years)
+Surface Temperature:	-87 to -5 degrees celcius
+First Record:	2nd Millenium BC
+Recorded By:	Egyptian astronomers

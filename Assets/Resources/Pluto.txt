@@ -1,0 +1,9 @@
+Mass:	13,050,000,000,000 billion kg (0.00218 x Earth)
+Diameter:	2,368 km (+- 20km)
+Known Moons:	5
+Notable Moons:	Charon, Nix, Hydra, Kerberos and Styx
+Orbit Distance:	5,874,000,000 km (39.26 AU)
+Orbit Period:	247.92065 Earth years
+Surface Temperature:	-229 degrees celcius
+Discovery Date:	February 18th 1930
+Discovered By:	Clyde W. Tombaugh
