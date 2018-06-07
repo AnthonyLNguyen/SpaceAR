@@ -8,6 +8,8 @@ public class Date : MonoBehaviour {
     public PlanetLocation p;
     public GameObject pl;
     private Boolean timelapse = false;
+    public int deltaTime = 2;
+
     // Use this for initialization
     void Start () {
         p = pl.GetComponent<PlanetLocation>();
@@ -27,7 +29,7 @@ public class Date : MonoBehaviour {
         if (timelapse == true)
         {
             print("running");
-            now = now.AddDays(2);
+            now = now.AddDays(deltaTime);
             GetComponent<UnityEngine.UI.Text>().text = now.ToString();
             double time = now.Subtract(new DateTime(2000, 1, 1, 12, 0, 0)).TotalSeconds / (60 * 60 * 24 * 365.25 * 100);
 
@@ -62,5 +64,10 @@ public class Date : MonoBehaviour {
     public void TimeLapseStart()
     {
             timelapse = !timelapse;
+    }
+
+    public void setDeltaTime(float t)
+    {
+        deltaTime = (int)t;
     }
 }
