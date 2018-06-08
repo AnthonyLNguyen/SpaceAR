@@ -7,4 +7,4 @@
 * You may also install Unity v2018.1 and import all files into unity, and build into an apk.
 
 
-[DL Link](https://drive.google.com/file/d/1Xt4oWalbAz2vpDF3zP503tWmRvxEo5nQ/view)
+[DL Link](https://github.com/Thingon/SpaceAR/raw/master/spacear.apk)
